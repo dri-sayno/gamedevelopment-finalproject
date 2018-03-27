@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +16,8 @@ public class platform : MonoBehaviour
                 Vector2 velocity = rb.velocity;
                 velocity.y = jumpForce;
                 rb.velocity = velocity;
+                //Destroy nest on collision
+                Destroy(gameObject);
             }
         }
     }
