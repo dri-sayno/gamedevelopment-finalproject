@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212274379674498828}
   - component: {fileID: 58207900694211102}
   - component: {fileID: 114551316615492632}
+  - component: {fileID: 114086512682591104}
   m_Layer: 0
   m_Name: coin
   m_TagString: Untagged
@@ -57,6 +58,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &114086512682591104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456253915955518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8149ff59016e354c9a9583bb39f37e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 1490447308098870, guid: ddb52a009278978439ae925d704574f6,
+    type: 2}
 --- !u!114 &114551316615492632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +83,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 5
-  coinSound: {fileID: 82842487352451686, guid: e0016ae4413bba047be84519a087253d, type: 2}
 --- !u!212 &212274379674498828
 SpriteRenderer:
   m_ObjectHideFlags: 1

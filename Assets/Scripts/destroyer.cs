@@ -11,7 +11,11 @@ public class destroyer : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        deathSound.Play();
+        if (!deathSound.isPlaying)
+        {
+            deathSound.Play();
+        }
+        
         if (col.gameObject.tag == "Egg")
         {
             if (scoremanager.scoreCount > scoremanager.highscoreCount)
