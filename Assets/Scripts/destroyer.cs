@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class destroyer : MonoBehaviour
 {
-    public static float delayTime = 3f;
+    public static float delayTime = 1f;
+    public GameObject deathMenu;
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -22,6 +23,6 @@ public class destroyer : MonoBehaviour
     void LoadScene()
     {
         platform.ctr = 0;
-        SceneManager.LoadScene(1);
+        deathMenu.SetActive(true);
     }
 }

@@ -11,6 +11,7 @@ public class scoremanager : MonoBehaviour {
     public static float highscoreCount;
     public float pointPerSecond;
     public static bool scoreIncreasing = true;
+    public GameObject deathMenu;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,8 @@ public class scoremanager : MonoBehaviour {
         {
             highscoreCount = PlayerPrefs.GetFloat("HighScore");
         }
-	}
+        deathMenu.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {

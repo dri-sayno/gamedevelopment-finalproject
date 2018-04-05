@@ -8,6 +8,7 @@ TagManager:
   - Egg
   - Branch-right
   - Branch-left
+  - Death-menu
   layers:
   - Default
   - TransparentFX
