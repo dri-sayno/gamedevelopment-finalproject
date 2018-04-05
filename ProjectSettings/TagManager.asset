@@ -9,6 +9,7 @@ TagManager:
   - Branch-right
   - Branch-left
   - Death-menu
+  - Pause-menu
   layers:
   - Default
   - TransparentFX
