@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 251160226989543118}
   - component: {fileID: 114405005953949642}
   - component: {fileID: 114614562584968066}
+  - component: {fileID: 114436963125605840}
   m_Layer: 0
   m_Name: nest-moving
   m_TagString: nest
@@ -74,6 +75,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 15
   delayTime: 0
+--- !u!114 &114436963125605840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1863258980609630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4385f91deacd4b80ede464fa8e66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   rightLimit: 2.5
   leftLimit: 1
   speed: 1

@@ -5,10 +5,10 @@ using UnityEngine;
 public class pickupPoints : MonoBehaviour {
 
     public int scoreToGive;
+    private AudioSource coinSound;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -21,6 +21,16 @@ public class pickupPoints : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Egg")
         {
+            coinSound = GameObject.Find("CoinSound").GetComponent<AudioSource>();
+            if (coinSound.isPlaying)
+            {
+                coinSound.Stop();
+                coinSound.Play();
+            }
+            else {
+                coinSound.Play();
+            }
+            
             scoremanager.AddScore(scoreToGive);
             gameObject.SetActive(false);
         }

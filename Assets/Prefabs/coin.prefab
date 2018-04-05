@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 5
+  coinSound: {fileID: 82842487352451686, guid: e0016ae4413bba047be84519a087253d, type: 2}
 --- !u!212 &212274379674498828
 SpriteRenderer:
   m_ObjectHideFlags: 1

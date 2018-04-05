@@ -9,7 +9,7 @@ public class platform : MonoBehaviour
     public static int ctr = 0;
     [SerializeField] float delayTime;
     private Vector3 startPos;
-    //public Transform target;
+    private AudioSource jumpSound;
 
     private bool moveUp;
 
@@ -25,15 +25,20 @@ public class platform : MonoBehaviour
             Rigidbody2D rb = collision.collider.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
+                jumpSound = GameObject.Find("JumpSound").GetComponent<AudioSource>();
+                if (jumpSound.isPlaying)
+                {
+                    jumpSound.Stop();
+                    jumpSound.Play();
+                }
+                else {
+                    jumpSound.Play();
+                }
+                
                 Vector2 velocity = rb.velocity;
                 velocity.y = jumpForce;
                 rb.velocity = velocity;
             }
         }
-    }
-
-    //moving platforms
-    void Update()
-    {
     }
 }

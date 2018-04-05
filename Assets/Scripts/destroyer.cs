@@ -7,9 +7,11 @@ public class destroyer : MonoBehaviour
 {
     public static float delayTime = 1f;
     public GameObject deathMenu;
+    public AudioSource deathSound;
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        deathSound.Play();
         if (col.gameObject.tag == "Egg")
         {
             if (scoremanager.scoreCount > scoremanager.highscoreCount)
