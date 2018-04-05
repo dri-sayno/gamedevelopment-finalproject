@@ -10,7 +10,7 @@ public class platform : MonoBehaviour
     [SerializeField] float delayTime;
     private Vector3 startPos;
     //public Transform target;
-    public float speed;
+
     private bool moveUp;
 
     void Start()
@@ -28,7 +28,6 @@ public class platform : MonoBehaviour
                 Vector2 velocity = rb.velocity;
                 velocity.y = jumpForce;
                 rb.velocity = velocity;
-                
             }
         }
     }
@@ -36,6 +35,5 @@ public class platform : MonoBehaviour
     //moving platforms
     void Update()
     {
-       
     }
 }

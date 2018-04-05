@@ -11,6 +11,11 @@ public class destroyer : MonoBehaviour
     {
         if (col.gameObject.tag == "Egg")
         {
+            if (scoremanager.scoreCount > scoremanager.highscoreCount)
+            {
+                scoremanager.highscoreCount = scoremanager.scoreCount;
+            }
+            scoremanager.scoreIncreasing = false;
             Invoke("LoadScene", delayTime);
             Debug.Log("collide", gameObject);
         }

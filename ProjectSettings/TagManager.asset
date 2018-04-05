@@ -6,6 +6,8 @@ TagManager:
   tags:
   - nest
   - Egg
+  - Branch-right
+  - Branch-left
   layers:
   - Default
   - TransparentFX
