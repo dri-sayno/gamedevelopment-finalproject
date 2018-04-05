@@ -17,12 +17,11 @@ public class destroyer : MonoBehaviour
             }
             scoremanager.scoreIncreasing = false;
             Invoke("LoadScene", delayTime);
-            Debug.Log("collide", gameObject);
         }
     }
     void LoadScene()
     {
         platform.ctr = 0;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
