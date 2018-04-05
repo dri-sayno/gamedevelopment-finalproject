@@ -435,6 +435,49 @@ Transform:
   m_Father: {fileID: 1428103026}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &513445355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 513445356}
+  - component: {fileID: 513445357}
+  m_Layer: 0
+  m_Name: ObjectPooler (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513445356
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513445355}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.750854, y: -30.95734, z: -0.13704248}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1891684578}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &513445357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513445355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508a1c6965352ad469fcf6678d047069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 1456253915955518, guid: 58da041f9def2a045b68b885a015cc1f,
+    type: 2}
+  pooledAmount: 10
 --- !u!1 &784590901
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +712,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 49008f6f35a91f94ea1f93997a57b50a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1123,11 +1166,13 @@ MonoBehaviour:
   - {fileID: 1863258980609630, guid: c190e5405797c91419497e0b8690401b, type: 2}
   - {fileID: 1246152684005552, guid: d51068239c5d2bf45aa1bedd6a8c5512, type: 2}
   - {fileID: 1559779747711478, guid: 7a1a9049c6d033f4da4418ca64d250a7, type: 2}
+  - {fileID: 1456253915955518, guid: 58da041f9def2a045b68b885a015cc1f, type: 2}
   theObjectPools:
   - {fileID: 1256232226}
   - {fileID: 2039544669}
   - {fileID: 312792745}
   - {fileID: 330232970}
+  - {fileID: 513445357}
 --- !u!4 &1531947916
 Transform:
   m_ObjectHideFlags: 0
@@ -1296,6 +1341,7 @@ Transform:
   - {fileID: 2039544668}
   - {fileID: 312792744}
   - {fileID: 330232969}
+  - {fileID: 513445356}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

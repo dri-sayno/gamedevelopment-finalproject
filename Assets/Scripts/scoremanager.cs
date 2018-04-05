@@ -16,6 +16,10 @@ public class scoremanager : MonoBehaviour {
 	void Start () {
         scoreCount = 0;
         scoreIncreasing = true;
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highscoreCount = PlayerPrefs.GetFloat("HighScore");
+        }
 	}
 	
 	// Update is called once per frame
@@ -28,9 +32,14 @@ public class scoremanager : MonoBehaviour {
 
         if (scoreCount > highscoreCount) {
             highscoreCount = scoreCount;
+            PlayerPrefs.SetFloat("HighScore", highscoreCount);
         }
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
         highscoreText.text = "High Score: " + Mathf.Round(highscoreCount);
 	}
+
+    public static void AddScore(int pointsToAdd) {
+        scoreCount += pointsToAdd;
+    }
 }
