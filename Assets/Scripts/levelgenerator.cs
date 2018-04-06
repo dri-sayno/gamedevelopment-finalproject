@@ -36,13 +36,13 @@ public class levelgenerator : MonoBehaviour {
             GameObject newPlatform = theObjectPools[platformSelector].GetPooledObject();
             if (newPlatform.tag == "Branch-right")
             {
-                newPlatform.transform.position = new Vector3(Random.Range(7, 5), transform.position.y + maxY, transform.position.z);
+                newPlatform.transform.position = new Vector3(Random.Range(10, 8), transform.position.y + maxY, transform.position.z);
                 newPlatform.transform.rotation = transform.rotation;
                 newPlatform.SetActive(true);
             }
             else if (newPlatform.tag == "Branch-left")
             {
-                newPlatform.transform.position = new Vector3(Random.Range(-5, -7), transform.position.y + maxY, transform.position.z);
+                newPlatform.transform.position = new Vector3(Random.Range(-10, -8), transform.position.y + maxY, transform.position.z);
                 newPlatform.SetActive(true);
             }
             else
